@@ -20,9 +20,9 @@ import retrofit.client.Response;
  * Created by Raquib-ul-Alam Kanak on 1/3/2014.
  * Website: http://alamkanak.github.io
  */
-public class AsynchronousActivity extends BaseActivity implements Callback<List<Event>> {
+public class AsyncActivity extends BaseActivity implements Callback<List<Event>> {
 
-    private List<WeekViewEvent> events = new ArrayList<WeekViewEvent>();
+    private List<WeekViewEvent> events = new ArrayList<>();
     boolean calledNetwork = false;
 
     @Override
@@ -40,7 +40,7 @@ public class AsynchronousActivity extends BaseActivity implements Callback<List<
         }
 
         // Return only the events that matches newYear and newMonth.
-        List<WeekViewEvent> matchedEvents = new ArrayList<WeekViewEvent>();
+        List<WeekViewEvent> matchedEvents = new ArrayList<>();
         for (WeekViewEvent event : events) {
             if (eventMatches(event, newYear, newMonth)) {
                 matchedEvents.add(event);
@@ -56,6 +56,7 @@ public class AsynchronousActivity extends BaseActivity implements Callback<List<
      * @param month The month.
      * @return True if the event matches the year and month.
      */
+    @SuppressWarnings("WrongConstant")
     private boolean eventMatches(WeekViewEvent event, int year, int month) {
         return (event.getStartTime().get(Calendar.YEAR) == year && event.getStartTime().get(Calendar.MONTH) == month - 1) || (event.getEndTime().get(Calendar.YEAR) == year && event.getEndTime().get(Calendar.MONTH) == month - 1);
     }
