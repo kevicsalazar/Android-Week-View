@@ -16,6 +16,11 @@ import java.util.List;
 public class BasicActivity extends BaseActivity {
 
     @Override
+    public int getLayout() {
+        return R.layout.activity_base;
+    }
+
+    @Override
     public List<? extends WeekViewEvent> onMonthChange(int newYear, int newMonth) {
         // Populate the week view with some events.
         List<WeekViewEvent> events = new ArrayList<>();

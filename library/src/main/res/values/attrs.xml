@@ -51,5 +51,11 @@
         <attr name="verticalFlingEnabled" format="boolean"/>
         <attr name="allDayEventHeight" format="dimension"/>
         <attr name="scrollDuration" format="integer"/>
+        <attr name="minHour" format="integer" />
+        <attr name="maxHour" format="integer" />
+        <attr name="zoomEnabled" format="boolean" />
+        <attr name="yScrollingEnabled" format="boolean" />
+        <attr name="fitOnScreen" format="boolean" />
+        <attr name="headerRowDateFormat" format="string"/>
     </declare-styleable>
 </resources>

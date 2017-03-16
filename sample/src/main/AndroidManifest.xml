@@ -22,6 +22,10 @@
             android:label="@string/title_activity_basic" >
         </activity>
         <activity
+            android:name=".StaticActivity"
+            android:label="@string/title_activity_static" >
+        </activity>
+        <activity
             android:name=".AsyncActivity"
             android:label="@string/title_activity_asynchronous" >
         </activity>

@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".StaticActivity">
+
+    <com.alamkanak.weekview.WeekView
+        android:id="@+id/weekView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:columnGap="8dp"
+        app:dayBackgroundColor="@android:color/white"
+        app:eventTextColor="#ffffff"
+        app:fitOnScreen="true"
+        app:headerColumnPadding="12dp"
+        app:headerColumnTextColor="#424242"
+        app:headerRowBackgroundColor="#EEEEEE"
+        app:headerRowPadding="12dp"
+        app:maxHour="23"
+        app:minHour="7"
+        app:noOfVisibleDays="3"
+        app:nowLineColor="#F44336"
+        app:showNowLine="true"
+        app:textSize="12sp"
+        app:todayBackgroundColor="@android:color/white"
+        app:todayHeaderTextColor="#424242"
+        app:xScrollingSpeed="0.5"
+        app:yScrollingEnabled="false"
+        app:zoomEnabled="false" />
+
+</RelativeLayout>

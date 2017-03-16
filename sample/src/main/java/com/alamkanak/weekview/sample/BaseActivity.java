@@ -34,7 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity implements WeekView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+        setContentView(getLayout());
 
         // Get a reference for the week view in the layout.
         mWeekView = (WeekView) findViewById(R.id.weekView);
@@ -56,7 +56,6 @@ public abstract class BaseActivity extends AppCompatActivity implements WeekView
         // the week view. This is optional.
         setupDateTimeInterpreter(false);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -112,6 +111,8 @@ public abstract class BaseActivity extends AppCompatActivity implements WeekView
 
         return super.onOptionsItemSelected(item);
     }
+
+    public abstract int getLayout();
 
     /**
      * Set up a date time interpreter which will show short date values when in week view and long

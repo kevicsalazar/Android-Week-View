@@ -26,6 +26,11 @@ public class AsyncActivity extends BaseActivity implements Callback<List<Event>>
     boolean calledNetwork = false;
 
     @Override
+    public int getLayout() {
+        return R.layout.activity_base;
+    }
+
+    @Override
     public List<? extends WeekViewEvent> onMonthChange(int newYear, int newMonth) {
 
         // Download events from network if it hasn't been done already. To understand how events are
